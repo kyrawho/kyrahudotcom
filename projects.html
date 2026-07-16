@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Kyra Hu</title>
+  <meta name="description" content="Small tools and gifts Kyra Hu built and maintains: The Gamers' Heardle, The JACK Road, Meghna's World, and Prixel." />
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">Kyra Hu</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a class="nav-cta" href="assets/resume/Kyra-Hu-Resume.pdf" data-resume>Résumé</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap">
+      <p class="eyebrow">Projects</p>
+      <h1>Little things I built for people I love.</h1>
+      <p class="section-lead">
+        A handful of small web apps I designed, built, and still maintain. Mostly gifts,
+        each one a working product with real users (my family and friends).
+      </p>
+
+      <!-- Cards rendered from content.js -->
+      <div class="proj-grid" data-projects></div>
+
+      <!--
+        v2 SCAFFOLD (not built yet):
+        Each project can get its own deep-dive subpage under /projects/.
+        A commented starter lives in projects/_project-template.html.
+        When ready, duplicate that file, fill it in, and point the card's
+        "link" in content.js at it (for example: projects/heardle.html).
+      -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <ul class="footer-links">
+        <li><a href="mailto:kyrahu12@gmail.com" data-email>kyrahu12@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/kyra-hu/" data-linkedin>LinkedIn</a></li>
+        <li><a href="https://x.com/kyrawhoo" data-x></a></li>
+        <li><a href="assets/resume/Kyra-Hu-Resume.pdf" data-resume>Résumé</a></li>
+      </ul>
+      <p class="footer-meta">&copy; <span data-year>2026</span> Kyra Hu &middot; New York, NY</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
