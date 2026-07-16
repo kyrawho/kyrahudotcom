@@ -1,4 +1,4 @@
-# kyrawho.github.io
+# kyrahudotcom
 
 Personal website for Kyra Hu. Plain HTML, CSS, and JavaScript, with no framework and no build step. Deployed with GitHub Pages, ready to serve at the custom domain `kyrahu.com`.
 
@@ -7,7 +7,7 @@ Personal website for Kyra Hu. Plain HTML, CSS, and JavaScript, with no framework
 ## File structure
 
 ```
-kyrawho.github.io/
+kyrahudotcom/
 ├── index.html                     # Home (hero, positioning, quick links)
 ├── experience.html                # Timeline of roles + education + skills
 ├── projects.html                  # Project cards
@@ -64,22 +64,18 @@ python3 -m http.server 8000
 
 ## How to deploy (GitHub Pages)
 
-This repo is a **GitHub user site**: because it is named `kyrawho.github.io`, GitHub Pages serves it at the root of that domain automatically.
+This repo is a **project site** named `kyrahudotcom`. By default GitHub Pages serves it at `https://kyrawho.github.io/kyrahudotcom/`, but the custom domain (see next section) makes it serve at `https://kyrahu.com` instead. The git repo is already initialized locally with a `main` branch and a first commit.
 
 First-time setup:
 
-1. Create a public repo named exactly `kyrawho.github.io` under the `kyrawho` account.
-2. From this folder:
+1. Create a public repo named `kyrahudotcom` under the `kyrawho` account (do not add a README, the files already exist here).
+2. Push this folder up. Easiest with the GitHub Desktop app (Add local repository → this folder → Publish). Or from a terminal:
    ```bash
-   git init
-   git add -A
-   git commit -m "Personal website v1"
-   git branch -M main
-   git remote add origin https://github.com/kyrawho/kyrawho.github.io.git
+   git remote add origin https://github.com/kyrawho/kyrahudotcom.git
    git push -u origin main
    ```
 3. In the repo on GitHub: **Settings → Pages**. Under "Build and deployment", set Source to **Deploy from a branch**, Branch **main**, folder **/ (root)**. Save.
-4. Wait a minute, then visit `https://kyrawho.github.io`.
+4. Set the custom domain in the same Pages screen (see next section). Until then, the site previews at `https://kyrawho.github.io/kyrahudotcom/`.
 
 Everyday updates after that:
 
@@ -119,7 +115,7 @@ The `CNAME` file in this repo already contains `kyrahu.com`, so most of the work
    CNAME   www   kyrawho.github.io.
    ```
 
-2. In the repo: **Settings → Pages → Custom domain**, confirm it shows `kyrahu.com`, and tick **Enforce HTTPS** once the certificate is issued (can take up to 24 hours).
+2. In the repo: **Settings → Pages → Custom domain**, confirm (or enter) `kyrahu.com` and Save, then tick **Enforce HTTPS** once the certificate is issued (can take up to 24 hours). The `CNAME` file in this repo usually pre-fills this for you.
 
 3. DNS can take a little while to propagate. Once it does, `https://kyrahu.com` serves this site.
 
