@@ -28,7 +28,19 @@ window.SITE = {
     linkedin: "https://www.linkedin.com/in/kyra-hu/",
     x: "https://x.com/kyrawhoo",
     xHandle: "@kyrawhoo",
-    resume: "assets/resume/Kyra-Hu-Resume.pdf"
+    letterboxd: "https://letterboxd.com/kyrawho/",
+    resume: "assets/resume/Kyra-Hu-Resume.pdf",
+
+    /* Headshot for the home page. Save your photo as this file (a web-friendly
+       JPG, roughly 800px wide is plenty). Until the file exists, the site shows
+       a clean "KH" placeholder in its place. */
+    headshot: "assets/img/kyra-headshot.jpg",
+
+    /* A warmer, more personal note for the home page. */
+    personal:
+      "When I'm not building operating systems at work, I'm building little ones " +
+      "at home: small web apps and games I make as gifts for the people I love. " +
+      "I'm also a serious movie person, always hunting for the next favorite."
   },
 
   /* ----- Experience timeline (newest first) -----

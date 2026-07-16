@@ -49,6 +49,7 @@
     document.querySelectorAll("[data-x]").forEach(function (a) {
       a.href = P.x; if (!a.textContent.trim()) a.textContent = P.xHandle;
     });
+    document.querySelectorAll("[data-letterboxd]").forEach(function (a) { if (P.letterboxd) a.href = P.letterboxd; });
     document.querySelectorAll("[data-resume]").forEach(function (a) { a.href = P.resume; });
   }
 
@@ -64,6 +65,28 @@
     if (intro) intro.textContent = P.intro;
     var loc = document.querySelector("[data-location]");
     if (loc) loc.textContent = P.location;
+    var personal = document.querySelector("[data-personal]");
+    if (personal) personal.textContent = P.personal;
+
+    /* Headshot: try the configured path, then a couple of common extensions,
+       and if none load, leave the clean "KH" placeholder frame in place. */
+    var photo = document.querySelector("[data-headshot]");
+    if (photo && P.headshot) {
+      var candidates = [
+        P.headshot,
+        P.headshot.replace(/\.jpg$/i, ".jpeg"),
+        P.headshot.replace(/\.jpg$/i, ".png")
+      ];
+      var idx = 0;
+      photo.addEventListener("error", function () {
+        idx += 1;
+        if (idx < candidates.length) { photo.src = candidates[idx]; }
+        else { photo.parentNode && photo.parentNode.removeChild(photo); }
+      });
+      photo.addEventListener("load", function () { photo.classList.add("loaded"); });
+      photo.src = candidates[0];
+      photo.alt = P.name;
+    }
   }
 
   /* ---------- Experience timeline ---------- */

@@ -32,18 +32,44 @@
   <!-- ===== Hero (name, positioning, intro filled from content.js) ===== -->
   <main>
     <section class="hero" data-hero>
-      <div class="wrap">
-        <p class="eyebrow">Operations &middot; Chief of Staff &middot; <span data-location>New York, NY</span></p>
-        <h1 data-name>Kyra Hu</h1>
-        <p class="positioning" data-positioning></p>
-        <p class="intro" data-intro></p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="assets/resume/Kyra-Hu-Resume.pdf" data-resume>Download résumé (PDF)</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/kyra-hu/" data-linkedin>LinkedIn</a>
-          <a class="btn btn-outline" href="experience.html">See my experience</a>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Operations &middot; Chief of Staff &middot; <span data-location>New York, NY</span></p>
+          <h1 data-name>Kyra Hu</h1>
+          <p class="positioning" data-positioning></p>
+          <p class="intro" data-intro></p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="assets/resume/Kyra-Hu-Resume.pdf" data-resume>Download résumé (PDF)</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/kyra-hu/" data-linkedin>LinkedIn</a>
+            <a class="btn btn-outline" href="experience.html">See my experience</a>
+          </div>
         </div>
+        <div class="hero-media">
+          <!-- Photo loads from profile.headshot (assets/img/kyra-headshot.jpg).
+               Until that file exists, a clean "KH" placeholder shows here. -->
+          <div class="photo-frame">
+            <img data-headshot alt="Kyra Hu" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Quick links into the rest of the site -->
+    <!-- A warmer, more personal note -->
+    <section class="section personal">
+      <div class="wrap">
+        <p class="eyebrow">Off the clock</p>
+        <h2>More than the résumé.</h2>
+        <p class="personal-copy" data-personal></p>
+        <div class="personal-links">
+          <a class="btn btn-ghost" href="https://letterboxd.com/kyrawho/" data-letterboxd>My Letterboxd</a>
+          <a class="btn btn-outline" href="projects.html">See what I build</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick links into the rest of the site -->
+    <section class="section">
+      <div class="wrap">
         <div class="quick-links">
           <a class="ql-card" href="experience.html">
             <h3>Experience</h3>
@@ -73,6 +99,7 @@
         <li><a href="mailto:kyrahu12@gmail.com" data-email>kyrahu12@gmail.com</a></li>
         <li><a href="https://www.linkedin.com/in/kyra-hu/" data-linkedin>LinkedIn</a></li>
         <li><a href="https://x.com/kyrawhoo" data-x></a></li>
+        <li><a href="https://letterboxd.com/kyrawho/" data-letterboxd>Letterboxd</a></li>
         <li><a href="assets/resume/Kyra-Hu-Resume.pdf" data-resume>Résumé</a></li>
       </ul>
       <p class="footer-meta">&copy; <span data-year>2026</span> Kyra Hu &middot; New York, NY</p>

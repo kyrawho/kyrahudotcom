@@ -103,6 +103,33 @@ p { margin: 0 0 1rem; }
 
 /* ---------- Home hero ---------- */
 .hero { padding: clamp(3rem, 8vw, 6rem) 0 clamp(2rem, 5vw, 4rem); }
+.hero-grid {
+  display: grid; grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2rem, 5vw, 4rem); align-items: center;
+}
+.hero-media { justify-self: center; width: 100%; max-width: 360px; }
+.photo-frame {
+  position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden;
+  border-radius: 20px; background: var(--accent-soft);
+  border: 1px solid var(--border); box-shadow: var(--shadow);
+}
+/* "KH" placeholder shown until the real photo loads on top of it */
+.photo-frame::after {
+  content: "KH"; position: absolute; inset: 0; z-index: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 4.5rem; font-weight: 600; letter-spacing: .02em;
+  color: var(--navy); opacity: .28;
+}
+.photo-frame img {
+  position: relative; z-index: 1; width: 100%; height: 100%;
+  object-fit: cover; object-position: center 20%; display: block;
+  opacity: 0; transition: opacity .4s ease;
+}
+.photo-frame img.loaded { opacity: 1; }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-media { order: -1; max-width: 260px; }
+}
 .hero .positioning {
   font-size: clamp(1.2rem, 2.6vw, 1.6rem); color: var(--accent);
   font-weight: 500; margin: .2rem 0 1.4rem; max-width: 40ch;
@@ -128,6 +155,11 @@ p { margin: 0 0 1rem; }
 /* ---------- Section scaffolding ---------- */
 .section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
 .section-lead { max-width: 60ch; color: var(--text); margin-bottom: 2.5rem; }
+
+/* ---------- Personal / "off the clock" band ---------- */
+.personal { border-top: 1px solid var(--border); background: #fff; }
+.personal-copy { font-size: 1.12rem; max-width: 60ch; margin-bottom: 1.6rem; }
+.personal-links { display: flex; flex-wrap: wrap; gap: .75rem; }
 
 /* ---------- Experience timeline ---------- */
 .timeline-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: 3.5rem; align-items: start; }
