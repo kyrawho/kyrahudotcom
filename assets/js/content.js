@@ -5,11 +5,12 @@
   Just change the text below, save, and refresh the page.
 
   How it works: this file assigns everything to a global called SITE.
-  The pages read from SITE and render the timeline, project cards, and links.
+  The pages read from SITE and render the launchpad, timeline, project cards,
+  and craft grid.
 
   Tips:
     - Keep the quotes and commas as they are. Only change the text inside quotes.
-    - To reorder experience or projects, move whole { ... } blocks up or down.
+    - To reorder experience / projects / crafts, move whole { ... } blocks.
     - Dates are just display text, so write them however you like.
 */
 
@@ -18,29 +19,50 @@ window.SITE = {
   /* ----- Basic profile + contact (used on every page) ----- */
   profile: {
     name: "Kyra Hu",
+
+    /* The one line on the home page. */
+    tagline:
+      "I spend my days making companies work for the people in them, " +
+      "and my free time making things for the people I love.",
+
+    /* A shorter professional positioning line (used on the About page). */
     positioning: "I build the operating systems that let fast-growing organizations scale.",
-    intro:
-      "I take ambiguous, high-stakes, ownerless problems and turn them into a plan, " +
-      "momentum, and a measurable outcome. I work at the operations and chief-of-staff " +
-      "level, building the quiet infrastructure that lets teams move faster without breaking.",
+
     location: "New York, NY",
     email: "kyrahu12@gmail.com",
     linkedin: "https://www.linkedin.com/in/kyra-hu/",
-    x: "https://x.com/kyrawhoo",
-    xHandle: "@kyrawhoo",
     letterboxd: "https://letterboxd.com/kyrawho/",
+    instagram: "https://www.instagram.com/kyraskrafts/",
+    instagramHandle: "@kyraskrafts",
     resume: "assets/resume/Kyra-Hu-Resume.pdf",
 
-    /* Headshot for the home page. Save your photo as this file (a web-friendly
-       JPG, roughly 800px wide is plenty). Until the file exists, the site shows
-       a clean "KH" placeholder in its place. */
-    headshot: "assets/img/kyra-headshot.jpg",
+    /* Headshot lives on the About page now. Save your photo as this file
+       (a web-friendly JPG, ~800px wide is plenty). */
+    headshot: "assets/img/kyra-headshot.jpg"
+  },
 
-    /* A warmer, more personal note for the home page. */
-    personal:
-      "When I'm not building operating systems at work, I'm building little ones " +
-      "at home: small web apps and games I make as gifts for the people I love. " +
-      "I'm also a serious movie person, always hunting for the next favorite."
+  /* ----- About page copy ----- */
+  about: {
+    lead:
+      "I'm Kyra — a chief of staff in New York who is happiest turning chaos " +
+      "into calm, whether that's an operating cadence for a fast-growing company " +
+      "or a small handmade thing at my kitchen table.",
+    paragraphs: [
+      "By day I work at the operations and chief-of-staff level: I take ambiguous, " +
+      "high-stakes, ownerless problems and turn them into a plan, momentum, and a " +
+      "measurable outcome. The throughline of my career has been building the quiet " +
+      "infrastructure that lets teams move faster without breaking.",
+
+      "What I actually care about, underneath the org charts and the KPIs, is people — " +
+      "making companies work for the people inside them. The best systems are the ones " +
+      "nobody notices, because everything just works.",
+
+      "Away from work, I make things. Small web apps and games I build as gifts for the " +
+      "people I love. Crafts I share at @kyraskrafts. And a steady, slightly obsessive " +
+      "diet of movies — I'm always hunting for the next favorite."
+    ],
+    /* The "off the clock" note about movies. */
+    moviesNote: "I log everything I watch on Letterboxd."
   },
 
   /* ----- Experience timeline (newest first) -----
@@ -112,9 +134,9 @@ window.SITE = {
 
   /* ----- Projects (small tools and gifts I built and maintain) -----
      Each card: title, tagline (one line), description, and a link.
-     "cta" is the button label. Set "wip: true" to show a work-in-progress tag.
+     "cta" is the link label. Set "wip: true" to show a work-in-progress tag.
      For a private project, set "access: true" so the card shows a
-     "Request access" button pointing at LinkedIn instead of a live link. */
+     "Request access" link pointing at LinkedIn instead of a live link. */
   projects: [
     {
       title: "The Gamers' Heardle",
@@ -153,5 +175,23 @@ window.SITE = {
       cta: "Preview the WIP",
       wip: true
     }
+  ],
+
+  /* ----- Crafts (@kyraskrafts) -----
+     A curated, self-hosted gallery. These are SCAFFOLD placeholders — swap them
+     for real work whenever you like.
+
+     To add a real craft:
+       1. Drop a photo into assets/img/crafts/ (any web-friendly JPG/PNG).
+       2. Fill in "img" with its path, a short "title", and an optional "note".
+       3. (Optional) point "link" at the matching Instagram post.
+     Leave "img" empty ("") and the tile shows a clean labeled placeholder. */
+  crafts: [
+    { title: "Coming soon", note: "A recent make", img: "", link: "" },
+    { title: "Coming soon", note: "A recent make", img: "", link: "" },
+    { title: "Coming soon", note: "A recent make", img: "", link: "" },
+    { title: "Coming soon", note: "A recent make", img: "", link: "" },
+    { title: "Coming soon", note: "A recent make", img: "", link: "" },
+    { title: "Coming soon", note: "A recent make", img: "", link: "" }
   ]
 };

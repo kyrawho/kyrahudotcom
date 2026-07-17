@@ -1,7 +1,7 @@
 /*
   main.js  —  reads window.SITE (from content.js) and renders the dynamic
-  parts of each page: home hero + links, the experience timeline, education,
-  skills, and the project cards.
+  parts of each page: the home launchpad, the About copy, the experience
+  timeline, education, skills, project cards, and the craft grid.
 
   You normally do NOT need to edit this file. To change wording or data,
   edit content.js instead. This file only decides how that content is drawn.
@@ -28,7 +28,7 @@
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
 
-  /* ---------- Footer + mobile nav (shared on every page) ---------- */
+  /* ---------- Header + footer (shared on every page) ---------- */
   function initChrome() {
     var year = document.querySelector("[data-year]");
     if (year) year.textContent = new Date().getFullYear();
@@ -41,36 +41,61 @@
         toggle.setAttribute("aria-expanded", open ? "true" : "false");
       });
     }
-    /* fill footer contact links from profile */
-    document.querySelectorAll("[data-email]").forEach(function (a) {
-      a.href = "mailto:" + P.email; a.textContent = P.email;
-    });
-    document.querySelectorAll("[data-linkedin]").forEach(function (a) { a.href = P.linkedin; });
-    document.querySelectorAll("[data-x]").forEach(function (a) {
-      a.href = P.x; if (!a.textContent.trim()) a.textContent = P.xHandle;
-    });
-    document.querySelectorAll("[data-letterboxd]").forEach(function (a) { if (P.letterboxd) a.href = P.letterboxd; });
-    document.querySelectorAll("[data-resume]").forEach(function (a) { a.href = P.resume; });
+
+    /* Fill contact links from profile. For icon links (which contain an <svg>)
+       we only set the href; for empty text links we also fill the label. */
+    function wire(sel, href, label) {
+      document.querySelectorAll(sel).forEach(function (a) {
+        if (href) a.href = href;
+        if (label && !a.querySelector("svg") && !a.textContent.trim()) {
+          a.textContent = label;
+        }
+      });
+    }
+    wire("[data-email]", "mailto:" + P.email, P.email);
+    wire("[data-linkedin]", P.linkedin, "LinkedIn");
+    wire("[data-letterboxd]", P.letterboxd, "Letterboxd");
+    wire("[data-instagram]", P.instagram, P.instagramHandle);
+    wire("[data-resume]", P.resume, "Résumé");
   }
 
-  /* ---------- Home ---------- */
+  /* ---------- Home launchpad ---------- */
   function initHome() {
-    var hero = document.querySelector("[data-hero]");
-    if (!hero) return;
-    var name = hero.querySelector("[data-name]");
-    var pos = hero.querySelector("[data-positioning]");
-    var intro = hero.querySelector("[data-intro]");
-    if (name) name.textContent = P.name;
-    if (pos) pos.textContent = P.positioning;
-    if (intro) intro.textContent = P.intro;
+    var home = document.querySelector("[data-home]");
+    if (!home) return;
+    var name = home.querySelector("[data-name]");
+    var tagline = home.querySelector("[data-tagline]");
     var loc = document.querySelector("[data-location]");
+    if (name) name.textContent = P.name;
+    if (tagline) tagline.textContent = P.tagline;
     if (loc) loc.textContent = P.location;
-    var personal = document.querySelector("[data-personal]");
-    if (personal) personal.textContent = P.personal;
+  }
 
-    /* Headshot: try the configured path, then a couple of common extensions,
-       and if none load, leave the clean "KH" placeholder frame in place. */
-    var photo = document.querySelector("[data-headshot]");
+  /* ---------- About ---------- */
+  function initAbout() {
+    var wrap = document.querySelector("[data-about]");
+    if (!wrap) return;
+    var A = SITE.about || {};
+
+    var lead = wrap.querySelector("[data-about-lead]");
+    if (lead) lead.textContent = A.lead || "";
+
+    var body = wrap.querySelector("[data-about-body]");
+    if (body) {
+      (A.paragraphs || []).forEach(function (para) {
+        body.appendChild(el("p", null, esc(para)));
+      });
+    }
+
+    var movies = wrap.querySelector("[data-about-movies]");
+    if (movies) {
+      movies.innerHTML =
+        esc(A.moviesNote || "") +
+        ' <a href="' + esc(P.letterboxd) + '">See my Letterboxd <span aria-hidden="true">&rarr;</span></a>';
+    }
+
+    /* Headshot with graceful fallback across common extensions. */
+    var photo = wrap.querySelector("[data-headshot]");
     if (photo && P.headshot) {
       var candidates = [
         P.headshot,
@@ -81,7 +106,7 @@
       photo.addEventListener("error", function () {
         idx += 1;
         if (idx < candidates.length) { photo.src = candidates[idx]; }
-        else { photo.parentNode && photo.parentNode.removeChild(photo); }
+        else if (photo.parentNode) { photo.parentNode.classList.add("no-photo"); photo.parentNode.removeChild(photo); }
       });
       photo.addEventListener("load", function () { photo.classList.add("loaded"); });
       photo.src = candidates[0];
@@ -93,7 +118,7 @@
   function initExperience() {
     var wrap = document.querySelector("[data-timeline]");
     if (!wrap) return;
-    (SITE.experience || []).forEach(function (job, i) {
+    (SITE.experience || []).forEach(function (job) {
       var item = el("article", { "class": "tl-item reveal", "tabindex": "0" });
       item.innerHTML =
         '<span class="tl-dot" aria-hidden="true"></span>' +
@@ -157,12 +182,13 @@
       var action;
       if (pr.access) {
         action =
-          '<a class="btn btn-primary" href="' + esc(P.linkedin) + '">' + esc(pr.cta) + '</a>' +
+          '<a class="text-link" href="' + esc(P.linkedin) + '">' + esc(pr.cta) +
+            ' <span aria-hidden="true">&rarr;</span></a>' +
           '<p class="proj-note">Password protected. Message me on ' +
-            '<a href="' + esc(P.linkedin) + '">LinkedIn</a> or ' +
-            '<a href="' + esc(P.x) + '">' + esc(P.xHandle) + '</a> for access.</p>';
+            '<a href="' + esc(P.linkedin) + '">LinkedIn</a> or by ' +
+            '<a href="mailto:' + esc(P.email) + '">email</a> for access.</p>';
       } else {
-        action = '<a class="btn btn-primary" href="' + esc(pr.link) + '">' + esc(pr.cta) +
+        action = '<a class="text-link" href="' + esc(pr.link) + '">' + esc(pr.cta) +
                  ' <span aria-hidden="true">&rarr;</span></a>';
       }
       card.innerHTML =
@@ -171,6 +197,41 @@
         '<p class="proj-desc">' + esc(pr.description) + '</p>' +
         '<div class="proj-action">' + action + '</div>';
       grid.appendChild(card);
+    });
+  }
+
+  /* ---------- Crafts ---------- */
+  function initCrafts() {
+    var grid = document.querySelector("[data-crafts]");
+    if (!grid) return;
+
+    var follow = document.querySelector("[data-crafts-follow]");
+    if (follow) {
+      follow.href = P.instagram;
+      follow.innerHTML = 'Follow ' + esc(P.instagramHandle) + ' <span aria-hidden="true">&rarr;</span>';
+    }
+
+    (SITE.crafts || []).forEach(function (c) {
+      var hasImg = c.img && c.img.trim();
+      var inner =
+        '<div class="craft-media' + (hasImg ? '' : ' is-placeholder') + '">' +
+          (hasImg
+            ? '<img src="' + esc(c.img) + '" alt="' + esc(c.title || "Craft") + '" loading="lazy" />'
+            : '<span class="craft-ph" aria-hidden="true"></span>') +
+        '</div>' +
+        '<div class="craft-meta">' +
+          '<span class="craft-title">' + esc(c.title || "") + '</span>' +
+          (c.note ? '<span class="craft-note">' + esc(c.note) + '</span>' : '') +
+        '</div>';
+
+      var tile;
+      if (c.link && c.link.trim()) {
+        tile = el("a", { "class": "craft reveal", "href": c.link });
+      } else {
+        tile = el("div", { "class": "craft reveal" });
+      }
+      tile.innerHTML = inner;
+      grid.appendChild(tile);
     });
   }
 
@@ -193,8 +254,10 @@
   document.addEventListener("DOMContentLoaded", function () {
     initChrome();
     initHome();
+    initAbout();
     initExperience();
     initProjects();
+    initCrafts();
     initReveal();
   });
 })();
