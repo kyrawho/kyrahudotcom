@@ -4,21 +4,36 @@ Personal website for Kyra Hu. Plain HTML, CSS, and JavaScript, with no framework
 
 ---
 
+## Design
+
+Dark-dominant, editorial look. Deep navy (`#163E64`, sampled from the résumé) is the
+primary surface with a warm off-white (`#F4F1EA`) as the secondary color. Sharp corners
+everywhere, text links instead of buttons, a serif display face (Fraunces) for headings
+and Inter for everything else. The home page is a minimal "launchpad" — name, tagline,
+and a large text-link index — and the rest of the site is flat pages reached from it.
+
 ## File structure
 
 ```
 kyrahudotcom/
-├── index.html                     # Home (hero, positioning, quick links)
+├── index.html                     # Home — launchpad (monogram, name, tagline, link index)
+├── about.html                     # About — headshot + personal narrative + movies
 ├── experience.html                # Timeline of roles + education + skills
-├── projects.html                  # Project cards
-├── blog.html                      # v2 stub (coming soon, not linked in nav)
+├── projects.html                  # Project cards (things I code)
+├── crafts.html                    # Crafts — @kyraskrafts gallery (things I make by hand)
+├── blog.html                      # v2 stub (not linked in nav, not restyled yet)
 ├── assets/
 │   ├── css/styles.css             # All styling. Design tokens are at the top in :root.
 │   ├── js/
 │   │   ├── content.js             # >>> EDIT THIS to change site content <<<
 │   │   └── main.js                # Renders content.js onto the pages (rarely edited)
 │   ├── resume/Kyra-Hu-Resume.pdf  # The downloadable résumé
-│   └── img/favicon.svg            # Site icon
+│   └── img/
+│       ├── favicon.svg            # Monogram favicon (navy mark on paper)
+│       ├── apple-touch-icon.png   # Home-screen / touch icon
+│       ├── og.png                 # Social + iMessage share preview (1200×630)
+│       ├── kyra-headshot.jpg      # About-page photo
+│       └── crafts/                # Drop craft photos here (see content.js crafts array)
 ├── projects/
 │   └── _project-template.html     # v2 stub for per-project deep-dive pages
 ├── CNAME                          # Custom domain (kyrahu.com)
@@ -34,15 +49,25 @@ kyrahudotcom/
 
 Open it and edit the text inside the quotes. It holds:
 
-- **`profile`** — your name, one-line positioning, intro paragraph, location, email, LinkedIn, X, and the résumé path.
+- **`profile`** — your name, the home-page `tagline`, a professional `positioning` line, location, email, LinkedIn, Letterboxd, Instagram (`@kyraskrafts`), and the résumé path.
+- **`about`** — the About page copy: a `lead` line, `paragraphs`, and a `moviesNote`.
 - **`experience`** — the timeline. Each role is a block with `company`, `title`, `dates`, and a one-line `summary`. On-page shows the one-liner only; the full bullets stay in the PDF so you never keep two copies in sync. To reorder, move whole `{ ... }` blocks. Newest first.
 - **`education`** — school and degrees.
 - **`skills`** — grouped skill chips.
-- **`projects`** — the project cards. Each has `title`, `tagline`, `description`, `link`, and `cta` (the button label). Options: add `wip: true` for a "Work in progress" tag, or `access: true` for a private project (shows a "Request access" button pointing at LinkedIn instead of a live link, and never prints a password).
+- **`projects`** — the project cards. Each has `title`, `tagline`, `description`, `link`, and `cta` (the link label). Options: add `wip: true` for a "Work in progress" tag, or `access: true` for a private project (shows a "Request access" link pointing at LinkedIn/email, and never prints a password).
+- **`crafts`** — the @kyraskrafts gallery tiles. Each has a `title`, optional `note`, an `img` path, and an optional `link` to the matching Instagram post. Leave `img` empty (`""`) to show a clean placeholder tile. To add a real craft, drop the photo in `assets/img/crafts/` and fill in its `img` path.
 
 Save the file and refresh the browser. No build, no commands.
 
-To change **colors or fonts**, edit the `:root` block at the top of `assets/css/styles.css` (the navy is `#163E64`, sampled from the résumé).
+To change **colors or fonts**, edit the `:root` block at the top of `assets/css/styles.css` (the navy is `#163E64`, sampled from the résumé; the serif is Fraunces, body is Inter).
+
+### Swapping the monogram / share image
+
+The favicon, touch icon, and social preview all use a recreated version of the monogram
+(a navy mark on paper). `assets/img/favicon.svg` is hand-editable. `assets/img/og.png`
+(1200×630) is what shows in iMessage and social previews — replace it with an updated
+export if you change the mark. If you have the exact original monogram file, drop it in
+and point these assets at it.
 
 To preview locally, just open `index.html` in a browser, or run a tiny static server from this folder:
 
