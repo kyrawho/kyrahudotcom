@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 240" fill="none" stroke="currentColor" stroke-width="34" stroke-linecap="butt">
+  <defs><clipPath id="kh"><rect x="0" y="0" width="180" height="240"/></clipPath></defs>
+  <g clip-path="url(#kh)">
+    <path d="M17 0 V240"/><path d="M163 0 V240"/><path d="M17 120 H163"/>
+    <path d="M17 120 L163 0"/><path d="M17 120 L163 240"/>
+  </g>
+</svg>

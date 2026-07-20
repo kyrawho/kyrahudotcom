@@ -96,7 +96,7 @@ p { margin: 0 0 1rem; }
 }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
 .brand { display: inline-flex; align-items: center; gap: .6rem; color: var(--on-dark); }
-.brand-mark { width: 26px; height: 26px; color: var(--on-dark); display: block; }
+.brand-mark { width: auto; height: 24px; color: var(--on-dark); display: block; }
 .brand-name { font-family: var(--serif); font-size: 1.15rem; letter-spacing: .01em; }
 .brand:hover .brand-name { color: var(--accent); }
 
