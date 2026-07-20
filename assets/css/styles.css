@@ -120,7 +120,9 @@ p { margin: 0 0 1rem; }
 
 /* Use dynamic/small viewport units so the home screen doesn't jump when
    iOS Safari's toolbar shows/hides (the classic 100vh mobile bug). */
-.launch { min-height: calc(100vh - 72px); min-height: calc(100svh - 72px); display: flex; align-items: center; padding: clamp(2rem, 6vw, 4rem) 0; }
+/* padding-block (not the shorthand) so .wrap's horizontal padding survives on
+   narrow screens — otherwise the launchpad text sits flush against the edge. */
+.launch { min-height: calc(100vh - 72px); min-height: calc(100svh - 72px); display: flex; align-items: center; padding-block: clamp(2rem, 6vw, 4rem); }
 .launch-grid { display: grid; grid-template-columns: 1fr; gap: clamp(2.5rem, 6vw, 4.5rem); width: 100%; }
 @media (min-width: 900px) { .launch-grid { grid-template-columns: 1.05fr 1fr; align-items: center; } }
 
