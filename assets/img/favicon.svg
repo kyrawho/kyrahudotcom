@@ -1,7 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
-  <rect width="300" height="300" fill="#F4F1EA"/>
-  <defs><clipPath id="kh"><rect x="60" y="30" width="180" height="240"/></clipPath></defs>
-  <g clip-path="url(#kh)" fill="none" stroke="#163E64" stroke-width="34" stroke-linecap="butt">
+  <style>
+    .kh { stroke: #163E64; }
+    @media (prefers-color-scheme: dark) { .kh { stroke: #EAEFF4; } }
+  </style>
+  <defs><clipPath id="khclip"><rect x="60" y="30" width="180" height="240"/></clipPath></defs>
+  <g class="kh" clip-path="url(#khclip)" fill="none" stroke-width="34" stroke-linecap="butt">
     <path d="M77 30 V270"/><path d="M223 30 V270"/><path d="M77 150 H223"/>
     <path d="M77 150 L223 30"/><path d="M77 150 L223 270"/>
   </g>
