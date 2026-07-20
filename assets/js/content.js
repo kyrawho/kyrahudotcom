@@ -144,8 +144,9 @@ window.SITE = {
       description:
         "Launched Mother's Day 2026. Guess the track from short audio clips, with daily " +
         "puzzles, categories, streaks, stats, and a full archive.",
+      note: "Not playable for visitors given Spotify API limits — but you can check out the interface.",
       link: "https://kyrawho.github.io/heardle",
-      cta: "Play the game"
+      cta: "View the interface"
     },
     {
       title: "The JACK Road",

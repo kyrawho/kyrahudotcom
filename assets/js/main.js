@@ -195,6 +195,7 @@
         '<div class="proj-head"><h3 class="proj-title">' + esc(pr.title) + '</h3>' + tag + '</div>' +
         '<p class="proj-tagline">' + esc(pr.tagline) + '</p>' +
         '<p class="proj-desc">' + esc(pr.description) + '</p>' +
+        (pr.note ? '<p class="proj-note">' + esc(pr.note) + '</p>' : '') +
         '<div class="proj-action">' + action + '</div>';
       grid.appendChild(card);
     });
