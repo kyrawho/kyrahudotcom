@@ -144,7 +144,7 @@ window.SITE = {
       description:
         "Launched Mother's Day 2026. Guess the track from short audio clips, with daily " +
         "puzzles, categories, streaks, stats, and a full archive.",
-      note: "Not playable for visitors given Spotify API limits — but you can check out the interface.",
+      note: "Not playable for visitors given Spotify API limits.",
       link: "https://kyrawho.github.io/heardle",
       cta: "View the interface"
     },
@@ -161,10 +161,10 @@ window.SITE = {
       title: "Meghna's World",
       tagline: "A little private site for a friend.",
       description:
-        "A small, personal site I built for my friend Meghna. It's password protected, so " +
+        "A small, personal site I built for my friend Meghna. It's emoji-password protected, so " +
         "access is by request only.",
       access: true,
-      cta: "Request access"
+      cta: "View the interface"
     },
     {
       title: "Prixel",
