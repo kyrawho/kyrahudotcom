@@ -171,7 +171,7 @@
     }
   }
 
-  /* ---------- Projects ---------- */
+/* ---------- Projects ---------- */
   function initProjects() {
     var grid = document.querySelector("[data-projects]");
     if (!grid) return;
@@ -189,13 +189,13 @@
             '<a href="mailto:' + esc(P.email) + '">email</a> for access.</p>';
       } else {
         action = '<a class="text-link" href="' + esc(pr.link) + '">' + esc(pr.cta) +
-                 ' <span aria-hidden="true">&rarr;</span></a>';
+                 ' <span aria-hidden="true">&rarr;</span></a>' +
+                 (pr.note ? '<p class="proj-note">' + esc(pr.note) + '</p>' : '');
       }
       card.innerHTML =
         '<div class="proj-head"><h3 class="proj-title">' + esc(pr.title) + '</h3>' + tag + '</div>' +
         '<p class="proj-tagline">' + esc(pr.tagline) + '</p>' +
         '<p class="proj-desc">' + esc(pr.description) + '</p>' +
-        (pr.note ? '<p class="proj-note">' + esc(pr.note) + '</p>' : '') +
         '<div class="proj-action">' + action + '</div>';
       grid.appendChild(card);
     });
