@@ -18,7 +18,7 @@ window.SITE = {
 
   /* ----- Basic profile + contact (used on every page) ----- */
   profile: {
-    name: "Kyra Hu",
+    name: "KYRA HU",
 
     /* The one line on the home page. */
     tagline:
