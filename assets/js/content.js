@@ -44,11 +44,11 @@ window.SITE = {
   /* ----- About page copy ----- */
   about: {
     lead:
-      "I'm Kyra — a chief of staff in New York who is happiest turning chaos " +
+      "I'm Kyra — a Head of Operations in New York who is happiest turning chaos " +
       "into calm, whether that's an operating cadence for a fast-growing company " +
       "or a small handmade thing at my kitchen table.",
     paragraphs: [
-      "By day I work at the operations and chief-of-staff level: I take ambiguous, " +
+      "By day I work at the operations and project management level: I take ambiguous, " +
       "high-stakes, ownerless problems and turn them into a plan, momentum, and a " +
       "measurable outcome. The throughline of my career has been building the quiet " +
       "infrastructure that lets teams move faster without breaking.",
@@ -71,10 +71,10 @@ window.SITE = {
   experience: [
     {
       company: "FoodServiceIQ",
-      title: "Chief of Staff",
+      title: "Head of Operations",
       dates: "2025 – Present",
       summary:
-        "Strategic right hand to leadership. Built the company's operational backbone " +
+        "Strategic ops leader. Built the company's operational backbone " +
         "and lead a team of three project managers."
     },
     {
