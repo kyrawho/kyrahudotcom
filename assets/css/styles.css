@@ -24,9 +24,9 @@
   --line-strong: rgba(234, 239, 244, .30);
   --accent: #9FC2E0;         /* pale steel-blue highlight, used sparingly */
 
-  --maxw: 1120px;
-  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+--maxw: 1120px;
+--sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+--serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
