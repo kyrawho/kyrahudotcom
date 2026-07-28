@@ -432,7 +432,7 @@ p {
   margin-bottom: 0;
 }
 
-.about-movies {
+.about-broadway {
   margin-top: 2.2rem;
   padding-top: 1.6rem;
   border-top: 1px solid var(--line);
@@ -440,7 +440,7 @@ p {
   font-size: 1.02rem;
 }
 
-.about-movies a {
+.about-broadway a {
   color: var(--on-dark);
   border-bottom: 1px solid var(--line-strong);
   padding-bottom: 2px;
@@ -449,7 +449,7 @@ p {
     border-color .18s ease;
 }
 
-.about-movies a:hover {
+.about-broadway a:hover {
   color: var(--accent);
   border-color: var(--accent);
 }
