@@ -423,6 +423,13 @@ p {
   margin: 0 0 2rem;
 }
 
+.lead-callout {
+  display: block;
+  background: var(--navy-raise);
+  border-left: 3px solid var(--accent);
+  padding: 1.4rem 1.6rem;
+}
+
 .lead-name-row {
   display: block;
   margin-bottom: .5rem;
