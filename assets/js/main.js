@@ -90,7 +90,7 @@ function initAbout() {
   }
 
   var lead = wrap.querySelector("[data-about-lead]");
-  if (lead) lead.textContent = A.lead || "";
+  if (lead) lead.innerHTML = A.lead || "";
 
   var body = wrap.querySelector("[data-about-body]");
   if (body) {
