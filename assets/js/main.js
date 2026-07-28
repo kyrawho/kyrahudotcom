@@ -99,6 +99,13 @@ function initAbout() {
     });
   }
 
+  var movies = wrap.querySelector("[data-about-movies]");
+  if (movies) {
+    movies.innerHTML =
+      esc(A.moviesNote || "") +
+      ' <a href="' + esc(P.broadwaynotion) + '">Notion Page <span aria-hidden="true">&rarr;</span></a>';
+  }
+
     /* Headshot with graceful fallback across common extensions. */
     var photo = wrap.querySelector("[data-headshot]");
     if (photo && P.headshot) {
