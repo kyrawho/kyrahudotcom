@@ -423,6 +423,26 @@ p {
   margin: 0 0 2rem;
 }
 
+.lead-word {
+  font-weight: 700;
+}
+
+.lead-phon {
+  display: inline-flex;
+  align-items: center;
+  margin-left: .5rem;
+  padding-left: .6rem;
+  border-left: 2px solid var(--accent);
+  font-family: var(--sans);
+  font-size: .42em;           /* scales down relative to the lead's clamp() size */
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--on-dark-muted);
+  vertical-align: middle;
+}
+
 .about-body p {
   font-size: 1.08rem;
   color: var(--on-dark-muted);
