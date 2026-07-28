@@ -103,7 +103,7 @@ function initAbout() {
   if (broadway) {
     broadway.innerHTML =
       esc(A.broadwayNote || "") +
-      ' <a href="' + esc(P.broadwaynotion) + '">Notion Page <span aria-hidden="true">&rarr;</span></a>';
+      ' <a href="' + esc(P.broadwaynotion) + '">Kyra\'s NYC Broadway lottery guide <span aria-hidden="true">&rarr;</span></a>'; 
   }
 
     /* Headshot with graceful fallback across common extensions. */
