@@ -52,16 +52,17 @@ window.SITE = {
       "or a small handmade thing at my kitchen table.",
     paragraphs: [
       "By day I work at the operations and project management level: I take ambiguous, " +
-      "high-stakes problems and turn them into a plan, momentum, and a measurable" +
+      "high-stakes problems and turn them into a plan, momentum, and a measurable " +
       "outcome. The throughline of my career has been building the infrastructure " +
       "that lets teams move quickly and efficiently, without sacrificing quality.",
-
+    
       "Away from work, I make things: small web apps and games I build as gifts for the " +
-      "people I love and crafts I share at @kyraskrafts. And a healthy consumption of" +
-      "movies, Broadway shows, and Saturday Night Live content"
+      "people I love and crafts I share at {{instagram}}. And a healthy consumption of movies " +
+      "(tracked on {{letterboxd}} and {{showscore}}), Broadway shows (logged in {{mezzanine}}), " +
+      "and Saturday Night Live content."
     ],
     /* The "off the clock" note about movies. */
-    moviesNote: "I log everything I watch on Letterboxd."
+    moviesNote: "Check out my NYC Broadway lottery guide."
   },
 
   /* ----- Experience timeline (newest first) -----
