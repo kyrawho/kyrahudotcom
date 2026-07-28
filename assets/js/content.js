@@ -154,10 +154,10 @@ window.SITE = {
     },
     {
       title: "The JACK Road",
-      tagline: "22 years of family trips, mapped.",
+      tagline: "JACK = Jeff, Amy, Kyra, & Carly",
       description:
         "A Father's Day gift for my dad: an interactive map tracing our family trips from " +
-        "2003 to 2026. Tap any stop to see the photos from that trip.",
+        "2003 to 2026. Click on a year or button to peek at photos from that trip.",
       link: "https://kyrawho.github.io/jack-road/",
       cta: "Open the map"
     },
