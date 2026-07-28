@@ -91,7 +91,7 @@
     if (movies) {
       movies.innerHTML =
         esc(A.moviesNote || "") +
-        ' <a href="' + esc(P.letterboxd) + '">See my Letterboxd <span aria-hidden="true">&rarr;</span></a>';
+        ' <a href="' + esc(P.broadwaynotion) + '">Check out my NYC Broadway lottery guide <span aria-hidden="true">&rarr;</span></a>';
     }
 
     /* Headshot with graceful fallback across common extensions. */
