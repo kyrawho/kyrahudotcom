@@ -47,8 +47,8 @@ window.SITE = {
 /* ----- About page copy ----- */
   about: {
     lead:
-      "Hi, I'm Kyra! I'm an experienced ops & PM leader in New York " +
-      "who loves SNL, Broadway shows, movies, and making things for friends and family.",
+      "KYRA /KEER-ah/ an experienced ops & PM leader in based out of Queens, NYC " +
+      "who loves SNL, Broadway shows, movies, and making delightful surprises for friends and family.",
     paragraphs: [
       "By day, I thrive when I'm tackling ambiguous, high-stakes problems and turning " +
       "them into plans and measurable outcomes. The throughline of my career has been " +
