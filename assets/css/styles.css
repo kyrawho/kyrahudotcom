@@ -432,6 +432,17 @@ p {
   margin-bottom: 0;
 }
 
+.about-body a {
+  color: var(--on-dark);
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 1px;
+  transition: color .18s ease, border-color .18s ease;
+}
+.about-body a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 .about-broadway {
   margin-top: 2.2rem;
   padding-top: 1.6rem;
