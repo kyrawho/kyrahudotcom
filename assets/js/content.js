@@ -76,10 +76,10 @@ window.SITE = {
     {
       company: "FoodServiceIQ",
       title: "Head of Operations",
-      dates: "2025 – Present",
+      dates: "2025 – PRESENT",
       summary:
         "Strategic ops leader. Built the company's operational backbone " +
-        "and lead a team of three project managers."
+        "and leads a team of three project managers."
     },
     {
       company: "Success Academy Charter Schools",
@@ -93,14 +93,14 @@ window.SITE = {
       title: "Project Manager",
       dates: "2023 – 2024",
       summary:
-        "Ran integrated marketing campaigns for a portfolio of global clients, on time and on budget."
+        "Ran integrated marketing campaigns for a portfolio of global clients, serving as the cross-functional rep between internal teams"
     },
     {
       company: "Wunderkind",
       title: "Project Coordinator",
       dates: "2022 – 2023",
       summary:
-        "Launched request and reporting systems, plus process docs that streamlined cross-team work."
+        "Launched request and reporting systems; architected process docs that streamlined cross-team work."
     },
     {
       company: "Project Sunshine",
@@ -108,7 +108,7 @@ window.SITE = {
       dates: "2021 – 2022",
       summary:
         "Key liaison across hospital partners, volunteers, and staff for pediatric programs, " +
-        "exceeding adoption and engagement KPIs."
+        "exceeding adoption and engagement metrics."
     }
   ],
 
