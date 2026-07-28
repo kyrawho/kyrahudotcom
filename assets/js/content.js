@@ -163,9 +163,9 @@ window.SITE = {
     },
     {
       title: "Meghna's World",
-      tagline: "A little private site for a friend.",
+      tagline: "meghnaOS",
       description:
-        "A digital, group birthday card I built for my friend Meghna.",
+        "A digital, group birthday card I built for my friend Meghna. Six little apps inspired by her interests and contributions from close friends",
       link: "https://kyrawho.github.io/meghnas-world/",
       cta: "Visit the site",
       note: "Password: 🎂🎈♊🎂"
