@@ -79,7 +79,7 @@ function initAbout() {
   /* Map of {{token}} -> rendered <a> tag, built from profile links. */
   var LINKS = {
     letterboxd: '<a href="' + esc(P.letterboxd) + '">Letterboxd</a>',
-    showscore: '<a href="' + esc(P.showscore) + '">Show-Score</a>',
+    showscore: '<a href="' + esc(P.showscore) + '">Showscore</a>',
     mezzanine: '<a href="' + esc(P.mezzanine) + '">Mezzanine</a>',
     instagram: '<a href="' + esc(P.instagram) + '">' + esc(P.instagramHandle) + '</a>'
   };
