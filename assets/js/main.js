@@ -71,28 +71,33 @@
     if (loc) loc.textContent = P.location;
   }
 
-  /* ---------- About ---------- */
-  function initAbout() {
-    var wrap = document.querySelector("[data-about]");
-    if (!wrap) return;
-    var A = SITE.about || {};
+function initAbout() {
+  var wrap = document.querySelector("[data-about]");
+  if (!wrap) return;
+  var A = SITE.about || {};
 
-    var lead = wrap.querySelector("[data-about-lead]");
-    if (lead) lead.textContent = A.lead || "";
+  /* Map of {{token}} -> rendered <a> tag, built from profile links. */
+  var LINKS = {
+    letterboxd: '<a href="' + esc(P.letterboxd) + '">Letterboxd</a>',
+    showscore: '<a href="' + esc(P.showscore) + '">Show-Score</a>',
+    mezzanine: '<a href="' + esc(P.mezzanine) + '">Mezzanine</a>',
+    instagram: '<a href="' + esc(P.instagram) + '">' + esc(P.instagramHandle) + '</a>'
+  };
+  function renderPara(para) {
+    return para.replace(/\{\{(\w+)\}\}/g, function (_, key) {
+      return LINKS[key] || "";
+    });
+  }
 
-    var body = wrap.querySelector("[data-about-body]");
-    if (body) {
-      (A.paragraphs || []).forEach(function (para) {
-        body.appendChild(el("p", null, esc(para)));
-      });
-    }
+  var lead = wrap.querySelector("[data-about-lead]");
+  if (lead) lead.textContent = A.lead || "";
 
-    var movies = wrap.querySelector("[data-about-movies]");
-    if (movies) {
-      movies.innerHTML =
-        esc(A.moviesNote || "") +
-        ' <a href="' + esc(P.broadwaynotion) + '">Check out my NYC Broadway lottery guide <span aria-hidden="true">&rarr;</span></a>';
-    }
+  var body = wrap.querySelector("[data-about-body]");
+  if (body) {
+    (A.paragraphs || []).forEach(function (para) {
+      body.appendChild(el("p", null, renderPara(para)));
+    });
+  }
 
     /* Headshot with graceful fallback across common extensions. */
     var photo = wrap.querySelector("[data-headshot]");
