@@ -47,14 +47,16 @@ window.SITE = {
 /* ----- About page copy ----- */
   about: {
     lead:
-     "<span class=\"lead-name-row\">" +
+    "<span class=\"lead-callout\">" +
+      "<span class=\"lead-name-row\">" +
         "<span class=\"lead-word\">KYRA</span>" +
         "<span class=\"lead-phon\">KEER-ah</span>" +
       "</span>" +
       "<span class=\"lead-desc\">" +
         "an experienced ops & PM leader based out of Queens, NYC " +
         "who loves SNL, Broadway shows, movies, and making delightful surprises for friends and family." +
-      "</span>",
+      "</span>" +
+    "</span>",
     paragraphs: [
       "By day, I thrive when I'm tackling ambiguous, high-stakes problems and turning " +
       "them into plans and measurable outcomes. The throughline of my career has been " +
