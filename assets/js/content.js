@@ -59,7 +59,7 @@ window.SITE = {
       "seeing shows and movies and logging my stats on {{letterboxd}}, {{mezzanine}}, and previously {{showscore}}."
     ],
     /* The "off the clock" note about movies. */
-    broadwayNote: "Check out my NYC Broadway lottery guide."
+    broadwayNote: "Want to see more Broadway shows without breaking the bank?"
   },
 
   /* ----- Experience timeline (newest first) -----
