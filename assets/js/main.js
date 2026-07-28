@@ -99,10 +99,10 @@ function initAbout() {
     });
   }
 
-  var movies = wrap.querySelector("[data-about-movies]");
-  if (movies) {
-    movies.innerHTML =
-      esc(A.moviesNote || "") +
+  var broadway = wrap.querySelector("[data-about-broadway]");
+  if (broadway) {
+    broadway.innerHTML =
+      esc(A.broadwayNote || "") +
       ' <a href="' + esc(P.broadwaynotion) + '">Notion Page <span aria-hidden="true">&rarr;</span></a>';
   }
 
