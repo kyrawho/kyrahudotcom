@@ -423,6 +423,11 @@ p {
   margin: 0 0 2rem;
 }
 
+.lead-name-row {
+  display: block;
+  margin-bottom: .5rem;
+}
+
 .lead-word {
   font-weight: 700;
 }
@@ -434,13 +439,20 @@ p {
   padding-left: .6rem;
   border-left: 2px solid var(--accent);
   font-family: var(--sans);
-  font-size: .42em;           /* scales down relative to the lead's clamp() size */
+  font-size: .42em;
   font-weight: 600;
   font-style: normal;
   letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--on-dark-muted);
   vertical-align: middle;
+}
+
+.lead-desc {
+  display: block;
+  font-size: .62em;
+  font-weight: 400;
+  color: var(--on-dark-muted);
 }
 
 .about-body p {
