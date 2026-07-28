@@ -167,7 +167,8 @@ window.SITE = {
       description:
         "A digital, group birthday card I built for my friend Meghna.",
       link: "https://kyrawho.github.io/meghnas-world/",
-      cta: "Visit the site"
+      cta: "Visit the site",
+      note: "Password: 🎂🎈♊🎂"
     },
     {
       title: "Prixel",
