@@ -37,6 +37,7 @@ window.SITE = {
     resume: "assets/resume/Kyra-Hu-Resume.pdf",
     mezzanine: "https://www.theaterdiary.com/user/self/?id=SmaIqfIU5T",
     showscore: "https://www.show-score.com/member/kyrawho",
+    broadwaynotion: "https://tinyurl.com/kyrabroadway",
 
     /* Headshot lives on the About page now. Save your photo as this file
        (a web-friendly JPG, ~800px wide is plenty). */
