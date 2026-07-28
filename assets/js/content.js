@@ -165,10 +165,9 @@ window.SITE = {
       title: "Meghna's World",
       tagline: "A little private site for a friend.",
       description:
-        "A small, personal site I built for my friend Meghna. It's emoji-password protected, so " +
-        "access is by request only.",
-      access: true,
-      cta: "View the interface"
+        "A digital, group birthday card I built for my friend Meghna.",
+      link: "https://kyrawho.github.io/meghnas-world/",
+      cta: "Visit the site"
     },
     {
       title: "Prixel",
