@@ -806,6 +806,20 @@ p {
   flex: 1;
 }
 
+.proj-desc a {
+  color: var(--on-dark);
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 1px;
+  transition:
+    color .18s ease,
+    border-color .18s ease;
+}
+
+.proj-desc a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 .proj-action {
   margin-top: auto;
 }
