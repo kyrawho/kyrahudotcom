@@ -44,25 +44,22 @@ window.SITE = {
     headshot: "assets/img/kyra-headshot.jpg"
   },
 
-  /* ----- About page copy ----- */
+/* ----- About page copy ----- */
   about: {
     lead:
-      "I'm Kyra — a Head of Operations in New York who is happiest turning chaos " +
-      "into calm, whether that's an operating cadence for a fast-growing company " +
-      "or a small handmade thing at my kitchen table.",
+      "I'm Kyra — an experienced Operations/Project Management Lead in New York " +
+      "who loves SNL, Broadway shows, movies, and making things for friends and family.",
     paragraphs: [
-      "By day I work at the operations and project management level: I take ambiguous, " +
-      "high-stakes problems and turn them into a plan, momentum, and a measurable " +
-      "outcome. The throughline of my career has been building the infrastructure " +
-      "that lets teams move quickly and efficiently, without sacrificing quality.",
-    
-      "Away from work, I make things: small web apps and games I build as gifts for the " +
-      "people I love and crafts I share at {{instagram}}. And a healthy consumption of movies " +
-      "(tracked on {{letterboxd}} and {{showscore}}), Broadway shows (logged in {{mezzanine}}), " +
-      "and Saturday Night Live content."
+      "By day, I thrive when I'm tackling ambiguous, high-stakes problems and turning " +
+      "them into plans and measurable outcomes. The throughline of my career has been " +
+      "building the infrastructure that lets teams move quickly and efficiently, " +
+      "without sacrificing quality.",
+
+      "In my free time, I love starting thoughtful projects, both physical and digital. I'm also an avid consumer of pop culture and love " +
+      "seeing shows and movies and logging my stats on {{letterboxd}}, {{mezzanine}}, and previously {{showscore}}."
     ],
     /* The "off the clock" note about movies. */
-    moviesNote: "Check out my NYC Broadway lottery guide."
+    broadwayNote: "Check out my NYC Broadway lottery guide."
   },
 
   /* ----- Experience timeline (newest first) -----
