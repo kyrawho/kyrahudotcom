@@ -47,15 +47,16 @@ window.SITE = {
 /* ----- About page copy ----- */
   about: {
     lead:
-      "KYRA /KEER-ah/ an experienced ops & PM leader in based out of Queens, NYC " +
+      "<span class=\"lead-word\">KYRA</span>" +
+      "<span class=\"lead-phon\">KEER-ah</span> " +
+      "an experienced ops & PM leader based out of Queens, NYC " +
       "who loves SNL, Broadway shows, movies, and making delightful surprises for friends and family.",
     paragraphs: [
       "By day, I thrive when I'm tackling ambiguous, high-stakes problems and turning " +
       "them into plans and measurable outcomes. The throughline of my career has been " +
       "building the infrastructure that lets teams move quickly and efficiently, " +
       "without sacrificing quality.",
-
-      "In my free time, I love starting thoughtful projects, both physical and digital. I'm also an avid consumer of pop culture and love " +
+      "In my free time, I love tinkering away on thoughtful projects, both physical and digital. I'm also an avid consumer of pop culture and love " +
       "seeing shows and movies and logging my stats on {{letterboxd}}, {{mezzanine}}, and previously {{showscore}}."
     ],
     /* The "off the clock" note about movies. */
