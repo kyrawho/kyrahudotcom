@@ -165,7 +165,7 @@ window.SITE = {
       title: "Meghna's World",
       tagline: "meghnaOS",
       description:
-        "A digital, group birthday card I built for my friend Meghna. Six little apps inspired by her interests and contributions from close friends",
+        "A digital, group birthday card I built for my friend Meghna. Six little apps inspired by her interests and contributions from close friends.",
       link: "https://kyrawho.github.io/meghnas-world/",
       cta: "Visit the site",
       note: "Password: 🎂🎈♊🎂"
@@ -174,8 +174,9 @@ window.SITE = {
       title: "Prixel",
       tagline: "A companion tool for the Prixel Press stamp kit.",
       description:
-        "A work-in-progress companion app for the Prixel Press stamp kit. Still being built, " +
-        "so expect rough edges.",
+        "A work-in-progress companion app for the " +
+        "<a href=\"https://prixel.com/\">Prixel Press</a> stamp kit. Check out my print exploration " +
+        "on my <a href=\"https://www.instagram.com/kyraskrafts/\">craft account</a>.",
       link: "https://kyrawho.github.io/prixel/",
       cta: "Preview the WIP",
       wip: true
