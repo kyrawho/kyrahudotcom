@@ -47,10 +47,14 @@ window.SITE = {
 /* ----- About page copy ----- */
   about: {
     lead:
-      "<span class=\"lead-word\">KYRA</span>" +
-      "<span class=\"lead-phon\">KEER-ah</span> " +
-      "an experienced ops & PM leader based out of Queens, NYC " +
-      "who loves SNL, Broadway shows, movies, and making delightful surprises for friends and family.",
+     "<span class=\"lead-name-row\">" +
+        "<span class=\"lead-word\">KYRA</span>" +
+        "<span class=\"lead-phon\">KEER-ah</span>" +
+      "</span>" +
+      "<span class=\"lead-desc\">" +
+        "an experienced ops & PM leader based out of Queens, NYC " +
+        "who loves SNL, Broadway shows, movies, and making delightful surprises for friends and family." +
+      "</span>",
     paragraphs: [
       "By day, I thrive when I'm tackling ambiguous, high-stakes problems and turning " +
       "them into plans and measurable outcomes. The throughline of my career has been " +
@@ -60,7 +64,7 @@ window.SITE = {
       "seeing shows and movies and logging my stats on {{letterboxd}}, {{mezzanine}}, and previously {{showscore}}."
     ],
     /* The "off the clock" note about movies. */
-    broadwayNote: "Want to see more Broadway shows without breaking the bank?"
+    broadwayNote: "Want to see more Broadway shows on a budget?"
   },
 
   /* ----- Experience timeline (newest first) -----
