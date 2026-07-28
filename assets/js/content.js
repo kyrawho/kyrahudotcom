@@ -49,17 +49,13 @@ window.SITE = {
       "or a small handmade thing at my kitchen table.",
     paragraphs: [
       "By day I work at the operations and project management level: I take ambiguous, " +
-      "high-stakes, ownerless problems and turn them into a plan, momentum, and a " +
-      "measurable outcome. The throughline of my career has been building the quiet " +
-      "infrastructure that lets teams move faster without breaking.",
+      "high-stakes problems and turn them into a plan, momentum, and a measurable" +
+      "outcome. The throughline of my career has been building the infrastructure " +
+      "that lets teams move quickly and efficiently, without sacrificing quality.",
 
-      "What I actually care about, underneath the org charts and the KPIs, is people — " +
-      "making companies work for the people inside them. The best systems are the ones " +
-      "nobody notices, because everything just works.",
-
-      "Away from work, I make things. Small web apps and games I build as gifts for the " +
-      "people I love. Crafts I share at @kyraskrafts. And a steady, slightly obsessive " +
-      "diet of movies — I'm always hunting for the next favorite."
+      "Away from work, I make things: small web apps and games I build as gifts for the " +
+      "people I love and crafts I share at @kyraskrafts. And a healthy consumption of" +
+      "movies, Broadway shows, and Saturday Night Live content"
     ],
     /* The "off the clock" note about movies. */
     moviesNote: "I log everything I watch on Letterboxd."
