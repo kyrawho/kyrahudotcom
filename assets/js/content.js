@@ -35,6 +35,8 @@ window.SITE = {
     instagram: "https://www.instagram.com/kyraskrafts/",
     instagramHandle: "@kyraskrafts",
     resume: "assets/resume/Kyra-Hu-Resume.pdf",
+    mezzanine: "https://www.theaterdiary.com/user/self/?id=SmaIqfIU5T",
+    showscore: "https://www.show-score.com/member/kyrawho",
 
     /* Headshot lives on the About page now. Save your photo as this file
        (a web-friendly JPG, ~800px wide is plenty). */
