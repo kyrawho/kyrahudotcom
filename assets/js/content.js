@@ -180,6 +180,15 @@ window.SITE = {
       link: "https://kyrawho.github.io/prixel/",
       cta: "Preview the WIP",
       wip: true
+    },
+     {
+      title: "Portfolio Website",
+      tagline: "Building my partner's art portfolio website",
+      description:
+        "My partner is a talented artist, photographer, and budding animator who shares some of her work on " +
+        "<a href=\"https://www.instagram.com/whaletang/\">Instagram</a>, and wanted a full website to showcase her work.",
+      link: "https://candacetang.com/",
+      cta: "Visit Candace's website"
     }
   ],
 
